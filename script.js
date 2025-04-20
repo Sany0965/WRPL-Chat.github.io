@@ -121,6 +121,7 @@ function addMessage(content, role, isImage = false, persist = true, isAudio = fa
   const contentDiv = document.createElement('div');
   contentDiv.classList.add('message-content');
 
+  let span;
   if (isImage) {
     const img = document.createElement('img');
     img.src = content;
@@ -189,24 +190,31 @@ function addMessage(content, role, isImage = false, persist = true, isAudio = fa
     player.appendChild(audio);
     contentDiv.appendChild(player);
   } else {
-    const span = document.createElement('span');
+    span = document.createElement('span');
     span.innerHTML = formatMessage(content, role);
+    if (role === 'bot') {
+      span.classList.add('bot-text');
+    }
     contentDiv.appendChild(span);
 
-    if (role === 'bot') {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'copy-btn fade-in';
-      btn.textContent = '📋';
-      btn.dataset.text = content;
-      contentDiv.appendChild(btn);
-    }
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'copy-btn fade-in';
+    btn.textContent = '📋';
+    btn.dataset.text = content;
+    contentDiv.appendChild(btn);
   }
 
   container.appendChild(avatarDiv);
   container.appendChild(contentDiv);
   chatEl.appendChild(container);
   chatEl.scrollTop = chatEl.scrollHeight;
+
+  if (role === 'bot' && !isImage && !isAudio) {
+    setTimeout(() => {
+      span.classList.add('visible');
+    }, 100);
+  }
 
   if (persist) {
     if (isImage || isAudio) {
