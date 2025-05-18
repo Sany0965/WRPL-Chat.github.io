@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WRPL Chat</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="WRPL Chat">
+  <meta property="og:description" content="Искусственный интеллект от Worpli🗨️">
+  <meta property="og:image" content="ai.png">
+  <meta property="og:url" content="./">
+  <meta property="og:type" content="website">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WRPL Chat">
+  <meta name="twitter:description" content="Искусственный интеллект от Worpli🗨️">
+  <meta name="twitter:image" content="ai.png">
 </head>
 <body>
   <header>
-    <img src="pi.png" alt="Avatar" style="width:40px; height:40px; border-radius:50%;">
-    WRPL Chat
-    <a href="https://sany0965.github.io" class="powered-by">Powered by worpli</a>
+    <span>WRPL Chat</span>
+    <a href="https://t.me/worpli" class="powered-by">Powered by worpli</a>
   </header>
   <div id="chat"></div>
   <form id="messageForm">
     <button type="button" id="micButton">🎤</button>
-    <input type="text" id="messageInput" placeholder="Введите сообщение..." />
+    <input type="text" id="messageInput" placeholder="Введите сообщение...">
     <button type="submit">📤</button>
   </form>
-
   <script src="script.js"></script>
-  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'932b14a80f4db038',t:'MTc0NTA1MTg1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
