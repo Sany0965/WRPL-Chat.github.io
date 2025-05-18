@@ -296,3 +296,63 @@ button[type="submit"]:hover {
 .bot-text.visible {
   opacity: 1;
 }
+
+.welcome-message .message-content {
+  background-color: #1a251e;
+  border: 1px solid #00e571;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.message-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #00e571;
+}
+
+.message-content p {
+  margin: 0.5rem 0;
+}
+
+.message-content ul {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.message-content li {
+  margin-bottom: 0.3rem;
+}
+
+.message-content a {
+  color: #00e571;
+  text-decoration: none;
+}
+
+.message-content a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .welcome-message .message-content {
+    padding: 0.6rem; /* Уменьшено с 1rem */
+    font-size: 0.85rem; /* Уменьшен базовый размер шрифта */
+  }
+
+  .message-content h2 {
+    font-size: 1.1rem; /* Уменьшено с 1.5rem */
+    margin-bottom: 0.3rem; /* Уменьшено с 0.5rem */
+  }
+
+  .message-content p {
+    margin: 0.3rem 0; /* Уменьшено с 0.5rem */
+  }
+
+  .message-content ul {
+    padding-left: 1rem; /* Уменьшено с 1.5rem */
+    margin: 0.3rem 0; /* Уменьшено с 0.5rem */
+  }
+
+  .message-content li {
+    margin-bottom: 0.2rem; /* Уменьшено с 0.3rem */
+  }
+}
